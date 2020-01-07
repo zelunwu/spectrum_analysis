@@ -10,3 +10,13 @@ College of Ocean and Earth Sicence, Xiamen University
 
 College of Earth, Ocean and Environment, University of Delaware
 
+## Functions
+
+o_dft: Descrete Fourier Transform of time series.
+
+o_asa: Autospectrum Analysis (Power Spectrum Density)
+
+o_autocorr: Auto-Correlation Coefficient
+
+o_cas: Cross Spectrum Analysis
+
