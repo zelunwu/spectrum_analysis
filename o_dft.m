@@ -28,6 +28,9 @@ end
 [sz1,sz2] = size(ts); %sz1 should be Time series (can be segment) length, and sz2 should be M_segment.
 if sz1<sz2
     warning('The number of columns(should be number of segments) is larger than number of rows(should be length of segemts)');
+    if sz1 == 1
+        ts = reshape(ts,[length(ts),1]);
+    end
 end
 %-------------------------------------------------------------------------%
 %% Parameters
