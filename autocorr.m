@@ -1,5 +1,5 @@
-function [R_tau,R_coef] = o_autocorr(ts,dt,unit)
-% [R_tau,R_coef] = O_AUTOCORR(ts,dt,unit)
+function [R_tau,R_coef] = autocorr(ts,dt,unit)
+% [R_tau,R_coef] = AUTOCORR(ts,dt,unit)
 % A function to calculate Autocovariance
 % Input:
 % 	ts: time series
@@ -8,7 +8,13 @@ function [R_tau,R_coef] = o_autocorr(ts,dt,unit)
 % Output:
 % 	R_tau: Auto-covariance
 %	R_coef: Auto-correlation, R_coef = R_tau/var(ts)
-
+% 
+%-------------------------------------------------------------------------%
+%   Author: Zelun Wu,
+%   Ph.D. student of Physical Oceanography
+%   University of Delaware, Xiamen University
+%   zelunwu@udel.edu, zelunwu@stu.xmu.edu.cn
+%-------------------------------------------------------------------------%
 
 
 N = length(ts);

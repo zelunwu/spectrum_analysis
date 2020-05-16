@@ -1,7 +1,7 @@
-function [freq,cpsd_xy_mean,coherence_xy,phase_x_mean,phase_y_mean] = o_csa(x,y,dt,M_seg,option)
-% [freq,cpsd_xy_mean,coherence_xy,phase_x_mean,phase_y_mean] = o_csa(x,y,dt,M_seg,option)
+function [freq,cpsd_xy_mean,coherence_xy,phase_x_mean,phase_y_mean] = csa(x,y,dt,M_seg,option)
+% [freq,cpsd_xy_mean,coherence_xy,phase_x_mean,phase_y_mean] = csa(x,y,dt,M_seg,option)
 % Cross Spectrum Analysis
-% Based on the Discrete Fourier Transform function: o_dft.m.
+% Based on the Discrete Fourier Transform function: dft.m.
 % %%
 % freq(n+1) = n*dt/N_segment, n = 0,1,2,...,N_segment-1
 % cpsd = 1/Time_segment*conj(Xf)*Yf, where Xf and Yf is the Fourier Transform of x and y.
@@ -54,8 +54,8 @@ x_seg_matrix = reshape(x(1:N_seg*M_seg),[N_seg,M_seg]);
 y_seg_matrix = reshape(y(1:N_seg*M_seg),[N_seg,M_seg]);
 %-------------------------------------------------------------------------%
 %% cpsd
-[Xf,freq] = o_dft(x_seg_matrix,dt,option);
-[Yf,freq] = o_dft(y_seg_matrix,dt,option);
+[Xf,freq] = dft(x_seg_matrix,dt,option);
+[Yf,freq] = dft(y_seg_matrix,dt,option);
 
 cpsd_xy_seg = 1/T_seg * conj(Xf).*Yf;
 cpsd_xy_mean = mean(cpsd_xy_seg,2);

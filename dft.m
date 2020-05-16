@@ -1,6 +1,6 @@
-function [Xf,freq] = o_dft(ts,dt,option)
+function [Xf,freq] = dft(ts,dt,option)
 %%
-%  Xf = O_DFT(ts,dt)
+%  Xf = DFT(ts,dt)
 %  Discrete Fourier Transform of time series ts with sample rate dt (time domain)
 %  Input:
 %     ts: time series, should be a N(sample_points)*1 sequence, or N(sample_points) * M_segment matrix. M_segment should be >= 1.
