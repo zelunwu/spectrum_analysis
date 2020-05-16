@@ -4,13 +4,13 @@ PSD for time series.
 
 ## Functions
 
-o_dft: Descrete Fourier Transform of time series.
+dft: Descrete Fourier Transform of time series.
 
-o_asa: Autospectrum Analysis (Power Spectrum Density)
+asa: Autospectrum Analysis (Power Spectrum Density)
 
-o_autocorr: Auto-Correlation Coefficient
+autocorr: Auto-Correlation Coefficient
 
-o_cas: Cross Spectrum Analysis
+cas: Cross Spectrum Analysis
 
 ## Author
 
